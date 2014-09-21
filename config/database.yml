@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: wedding_dev
+  pool: 5
+  host: localhost
+  username: mitchnick
+  password: mitchnick
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: wedding_test
+  pool: 5
+  host: localhost
+  username: mitchnick
+  password: mitchnick
+

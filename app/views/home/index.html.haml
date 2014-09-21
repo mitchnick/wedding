@@ -1,0 +1,253 @@
+%nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+  .container
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand.visible-xs{:href => "#home"} Lorenso & Julia
+
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.active
+          %a{:href => "#home"} Home
+        %li
+          %a{:href => "#about"} About
+        %li
+          %a{:href => "#ceremony"} Ceremony
+        %li
+          %a{:href => "#photos"} Photos
+        %li
+          %a{:href => "#story"} Story
+        %li
+          %a{:href => "#contact"} Contact
+
+%section#home{:style => "background: url(assets/img01.jpg);"}
+  .container
+    .row
+      .col-md-12
+        %h1 Emily & Mitch
+        %h3
+          %span Are getting
+        %h2
+          %i.fa.fa-heart-o
+          HITCHED!
+          %i.fa.fa-heart-o
+        %h4 And they are pleased to
+        %h5
+          %span ~ Invite you ~
+/ end:home
+/ begin:about
+%section#about
+  .about-inner
+    .container
+      .row
+        .col-md-4
+          %h2 Lorenso
+          %p
+            Lorenso, 21 Tahun. Pria tak tampan yang bercita-cita menjadi jutawan dengan modal pas-pasan.
+            Hobi berenang, menolong teman, sepak bola, main futsal, main PES, dan segala sesuatu tentang bal-balan.
+            Bisanya cuma nyinyir dan komentar, agak sombong tapi nggak arogan.
+          %blockquote
+            Cinta itu.. jika kamu bilang iya ~ waktu aku bertanya "Maukah kau menikah denganku?" #eeaaa
+            %small Lorenso
+        / break
+        .col-md-4
+          .about-img-container{:style => "background: url(assets/img05.jpg) center;"}
+          %img.about-img.img-responsive{:src => "assets/bottom.png"}/
+        / break
+        .col-md-4
+          %h2 Julia
+          %p
+            Julia, 20 Tahun. Wanita periang yang bercita-cita menjadi seorang pendidik dan pengajar.
+            Murah senyum, galak, tapi sangat cengeng. Tinggi, langsing, hidung pesek dan bergingsul.
+            Hobi makan es krim, mie ayam dan ngambek. Care sama temen dan pokoknya lakik #ehh.
+          %blockquote
+            Cinta itu.. jika kamu langsung datang kerumah dan melamarku ~ #duhh
+            %small Julia
+        / break
+/ end:about
+/ begin:ceremony
+%section#ceremony{:style => "background: url(assets/img04.jpg);"}
+  .container
+    .row
+      .col-md-12
+        %h1 The Ceremony
+        %h3
+          %span Will Be Held On
+        %h2 26, 2013
+        %h5
+          %span ~ December ~
+        %h4 Mi'rojul Muttaqinallah Mosque, Yogyakarta 09.00 WIB
+/ end:ceremony
+/ begin:photos
+%section#photos
+  .container
+    .row
+      .col-md-4
+        %img.about-img.img-responsive{:src => "assets/bottom.png"}/
+        %h2 Wedding Gallery
+        %p Here, you can put photos of about couple, prewedd, and many more.
+      / break
+      .col-md-8
+        #wedding-photo.carousel.slide{"data-ride" => "carousel"}
+          .carousel-inner
+            .item
+              .row
+                .col-md-4.col-sm-4.col-xs-12.animated.fadeInLeftBig
+                  %a.gallery-images{:href => "assets/img01.jpg"}
+                    .photo-gallery{:style => "background: url(assets/img01.jpg);"}
+                .col-md-4.col-sm-4.col-xs-12.animated.fadeInDownBig
+                  %a.gallery-images{:href => "assets/img02.jpg"}
+                    .photo-gallery{:style => "background: url(assets/img02.jpg);"}
+                .col-md-4.col-sm-4.col-xs-12.animated.fadeInRightBig
+                  %a.gallery-images{:href => "assets/img03.jpg"}
+                    .photo-gallery{:style => "background: url(assets/img03.jpg);"}
+            .item.active
+              .row
+                .col-md-4.col-sm-4.col-xs-12.animated.fadeInRightBig
+                  %a.gallery-images{:href => "assets/img04.jpg"}
+                    .photo-gallery{:style => "background: url(assets/img04.jpg);"}
+                .col-md-4.col-sm-4.col-xs-12.animated.fadeInUpBig
+                  %a.gallery-images{:href => "assets/img05.jpg"}
+                    .photo-gallery{:style => "background: url(assets/img05.jpg);"}
+                .col-md-4.col-sm-4.col-xs-12.animated.fadeInLeftBig
+                  %a.gallery-images{:href => "assets/img06.jpg"}
+                    .photo-gallery{:style => "background: url(assets/img06.jpg);"}
+          %a.left.carousel-control{"data-slide" => "prev", :href => "#wedding-photo"}
+            %span.glyphicon.glyphicon-chevron-left
+          %a.right.carousel-control{"data-slide" => "next", :href => "#wedding-photo"}
+            %span.glyphicon.glyphicon-chevron-right
+/ end:photos
+/ begin:story
+%section#story
+  .container
+    .row
+      .col-md-12
+        %h2 The Story
+        %ul.content
+          %li
+            %h3.content-avatar.avatar-top
+              .img-avatar{:style => "background: url(assets/img08.jpg);"}
+            %ul
+              / begin:content-text
+              %li.content-item.content-text
+                %h3 Hae :">
+                .text I meet you at the first time. I smile, and you don't smile back to me. I was silent, and you laugh out loud alone. I'ts so fuck'in romantic epic. :))
+                %time{:datetime => ""}
+                  %i.fa.fa-calendar
+                  December, 19 2010
+              / end:content-text
+              / begin:content-photo
+              %li.content-item.content-photo
+                %img{:alt => "ditinggal rabi - together", :src => "assets/img05.jpg"}/
+                %p.caption At the first date, we ate ice cream and "cemong" together. We enjoyed the evening. Sitting on the bench side of the road. Telling each other silly thing, and I was able to make a little melted. Emm.. I mean make your ice cream melts. :|
+                %time{:datetime => ""}
+                  %i.fa.fa-calendar
+                  January, 19 2011
+              / end:content-photo
+              / begin:content-photo
+              %li.content-item.content-photo
+                %img{:alt => "ditinggal rabi - sleep together", :src => "assets/img06.jpg"}/
+                %time{:datetime => ""}
+                  %i.fa.fa-calendar
+                  February, 19 2011
+              / end:content-photo
+              / begin:content-chat
+              %li.content-item.content-chat
+                %p.text.chat.odd A : Sist..
+                %p.text.chat.even B : Yeah..
+                %p.text.chat.odd A : Sist..
+                %p.text.chat.even B : Yeahh broth..
+                %p.text.chat.odd A : Would you be..
+                And then silence....
+                %time{:datetime => ""}
+                  %i.fa.fa-calendar
+                  March, 26 2011
+              / end:content-chat
+              / begin:content-quote
+              %li.content-item.content-quote
+                %blockquote
+                  %p
+                    I do not promise anything, I can only promise one thing. I would still handsome until tomorrow...
+                    %small avriqq
+                  %time{:datetime => ""}
+                    %i.fa.fa-calendar
+                    March, 26 2013
+              / end:content-quote
+              / begin:content-photo
+              %li.content-item.content-photo
+                %img{:alt => "ditinggal rabi - wedding ring", :src => "assets/img07.jpg"}/
+                %p.caption And finally, we are now getting married. :')
+                %time{:datetime => ""}
+                  %i.fa.fa-calendar
+                  March, 26 2016
+              / end:content-photo
+          %li.content-end
+            %h3.content-avatar.avatar-end
+              .img-avatar{:style => "background: url(assets/avatar.png);"}
+/ end:story
+/ begin:contact
+%section#contact
+  #maps
+  .container
+    .row
+      .col-md-12
+        %h2 Contact Us
+        .contact-container
+          .row
+            %form
+              .col-md-6.col-sm-6
+                %textarea.form-control.no-resize{:placeholder => "Message", :rows => "7"}
+              / break
+              .col-md-6.col-sm-6
+                %input.form-control{:placeholder => "Name", :type => "text"}/
+                %input.form-control{:placeholder => "Email", :type => "email"}/
+                %input.btn.btn-lg.btn-green{:type => "submit", :value => "Submit"}/
+        %h5
+          %span ~ Thank you ~
+/ end:contact
+/ begin:copyright
+%section#copyright
+  .container
+    .row
+      .col-md-12
+        %h2 Lorenso & Julia
+        %h3 Yang sangat berbahagia
+    .row
+      .col-md-12
+        %ul.list-inline.social-icon
+          %li
+            %a.icon-twitter{"data-placement" => "top", :href => "#", :rel => "tooltip", :title => "Twitter"}
+              %i.fa.fa-twitter
+          %li
+            %a.icon-facebook{"data-placement" => "top", :href => "#", :rel => "tooltip", :title => "Facebook"}
+              %i.fa.fa-facebook-square
+          %li
+            %a.icon-google{"data-placement" => "top", :href => "#", :rel => "tooltip", :title => "Google Plus"}
+              %i.fa.fa-google-plus
+          %li
+            %a.icon-instagram{"data-placement" => "top", :href => "#", :rel => "tooltip", :title => "Instagram"}
+              %i.fa.fa-instagram
+    .row
+      .col-md-12
+        %p
+          Lorenso & Julia's Wedding Invitation built with
+          %i.fa.fa-heart-o
+          by
+          %a{:href => "http://about.me/avriqq", :target => "_blank"} @avriqq
+        %p Copyright © 2014 All Right Reserved.
+/ end:copyright
+/
+  Bootstrap core JavaScript
+  \==================================================
+/ Placed at the end of the document so the pages load faster
+/ %script{:src => "js/jquery.js"}
+/ %script{:src => "js/bootstrap.js"}
+/ %script{:src => "http://maps.google.com/maps/api/js?sensor=false&language=en", :type => "text/javascript"}
+/ %script{:src => "js/gmap3.js"}
+/ %script{:src => "js/jquery.colorbox.js"}
+/ %script{:src => "js/jquery.easing.js"}
+/ %script{:src => "js/script.js"}
