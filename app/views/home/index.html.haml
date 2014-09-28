@@ -16,7 +16,7 @@
         %li
           %a{:href => "#about"} About
         %li
-          %a{:href => "#ceremony"} Ceremony
+          %a{:href => "#ceremony"} Ceremony & Guest Info
         %li
           %a{:href => "#photos"} Photos
         %li
@@ -24,64 +24,10 @@
         %li
           %a{:href => "#contact"} Contact
 
-%section#home{:style => "background: url(assets/img01.jpg);"}
-  .container
-    .row
-      .col-md-12
-        %h1 Emily & Mitch
-        %h3
-          %span Are getting
-        %h2
-          %i.fa.fa-heart-o
-          HITCHED!
-          %i.fa.fa-heart-o
-        %h4 And we are pleased to
-        %h5
-          %span Invite you
+= render partial: "home_section"
+= render partial: "about_section"
+= render partial: "ceremony_section"
 
-%section#about
-  .about-inner
-    .container
-      .row
-        .col-md-4
-          %h2 Lorenso
-          %p
-            Lorenso, 21 Tahun. Pria tak tampan yang bercita-cita menjadi jutawan dengan modal pas-pasan.
-            Hobi berenang, menolong teman, sepak bola, main futsal, main PES, dan segala sesuatu tentang bal-balan.
-            Bisanya cuma nyinyir dan komentar, agak sombong tapi nggak arogan.
-          %blockquote
-            Cinta itu.. jika kamu bilang iya ~ waktu aku bertanya "Maukah kau menikah denganku?" #eeaaa
-            %small Lorenso
-        / break
-        .col-md-4
-          .about-img-container{:style => "background: url(assets/img05.jpg) center;"}
-          %img.about-img.img-responsive{:src => "assets/bottom.png"}/
-        / break
-        .col-md-4
-          %h2 Julia
-          %p
-            Julia, 20 Tahun. Wanita periang yang bercita-cita menjadi seorang pendidik dan pengajar.
-            Murah senyum, galak, tapi sangat cengeng. Tinggi, langsing, hidung pesek dan bergingsul.
-            Hobi makan es krim, mie ayam dan ngambek. Care sama temen dan pokoknya lakik #ehh.
-          %blockquote
-            Cinta itu.. jika kamu langsung datang kerumah dan melamarku ~ #duhh
-            %small Julia
-        / break
-/ end:about
-/ begin:ceremony
-%section#ceremony{:style => "background: url(assets/img04.jpg);"}
-  .container
-    .row
-      .col-md-12
-        %h1 The Ceremony
-        %h3
-          %span Will Be Held On
-        %h2 26, 2013
-        %h5
-          %span ~ December ~
-        %h4 Mi'rojul Muttaqinallah Mosque, Yogyakarta 09.00 WIB
-/ end:ceremony
-/ begin:photos
 %section#photos
   .container
     .row
