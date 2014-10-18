@@ -7,7 +7,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand.visible-xs{:href => "#home"} Lorenso & Julia
+      %a.navbar-brand.visible-xs{:href => "#home"} Emily & Mitch
 
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
@@ -18,6 +18,8 @@
         %li
           %a{:href => "#ceremony"} Ceremony & Guest Info
         %li
+          %a{:href => "#to-do"} Things to do
+        %li
           %a{:href => "#photos"} Photos
         %li
           %a{:href => "#story"} Story
@@ -27,6 +29,7 @@
 = render partial: "home_section"
 = render partial: "about_section"
 = render partial: "ceremony_section"
+= render partial: "to_do"
 
 %section#photos
   .container

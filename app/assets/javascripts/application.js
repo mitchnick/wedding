@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require google_maps_api
 //= require_tree .
+
+$(document).on('ready page:load', function () {
+  $('#to-do-activities').slimScroll({
+    height: '600px'
+  });
+})

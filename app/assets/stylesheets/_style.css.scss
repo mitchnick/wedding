@@ -271,6 +271,7 @@ a:hover{
 
 #home h1,
 #ceremony h1,
+#to-do h1,
 #story h2,
 #contact h2{
 	padding-bottom: 30px;
@@ -284,7 +285,8 @@ a:hover{
 }
 
 #home h2,
-#ceremony h2{
+#ceremony h2,
+#to-do h2,{
 	padding-top: 20px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 900;
@@ -438,7 +440,9 @@ a:hover{
 #about:after,
 #ceremony:after,
 #photos:after,
-#story:after{
+#story:after,
+#guest-info:after,
+#to-do:after,{
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -515,6 +519,22 @@ a:hover{
 	position: relative;
 	width: 100%;
 	padding-top: 120px;
+	padding-right: 0;
+	padding-bottom: 80px;
+	padding-left: 0;
+	-webkit-background-size: cover !important;
+	   -moz-background-size: cover !important;
+		-ms-background-size: cover !important;
+		 -o-background-size: cover !important;
+			background-size: cover !important;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+#to-do {
+	position: relative;
+	width: 100%;
+	padding-top: 60px;
 	padding-right: 0;
 	padding-bottom: 80px;
 	padding-left: 0;

@@ -8,6 +8,10 @@ strong {
   font-weight: bold;
 }
 
+.underlined {
+  text-decoration: underline;
+}
+
 #home h1{
   color: $grey2;
   text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -49,10 +53,13 @@ h1 {
 
 
 // CEREMONY SECTION
+#ceremony {
+  min-height: 700px;
+}
 
 .well {
-  background-color: $grey1;
-  opacity: 0.9;
+  background-color: white;
+  opacity: 0.7;
 }
 
 #guest-in {
@@ -65,3 +72,41 @@ h1 {
     background: none;
   }
 }
+
+// THINGS TO DO
+#to-do {
+  min-height: 800px;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+dt,
+dd {
+  line-height: 1.42857143;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+
+.dl-horizontal dt {
+  float: left;
+  width: 160px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dl-horizontal dd {
+  margin-left: 180px;
+}
+
+.dl-horizontal hr {
+  margin-left: 180px;
+}
+
