@@ -406,7 +406,7 @@ a:hover{
 	[5. ABOUT]
 	==============
 */
-#about{
+#about, #guest-info{
 	position: relative;
 	width: 100%;
 	padding-top: 120px;
@@ -423,7 +423,7 @@ a:hover{
 	background-position: center center;
 }
 
-#about:before {
+#about:before{
 	content: "";
 	position: absolute;
 	top: 0;
@@ -457,7 +457,7 @@ a:hover{
 	text-align: center;
 }
 
-#about h2{
+#about h2, #guest-info h2{
 	padding: 20px 0 0;
 	margin-top: 0;
 	margin-bottom: 30px;

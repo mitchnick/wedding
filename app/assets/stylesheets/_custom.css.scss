@@ -1,8 +1,15 @@
 @import "variables";
 
 // HOME SECTION
+p {
+  font-size: 1.20em;
+}
+strong {
+  font-weight: bold;
+}
+
 #home h1{
-  color: $home-text;
+  color: $grey2;
   text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
