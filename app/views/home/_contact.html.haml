@@ -1,0 +1,18 @@
+%section#contact
+  #maps
+  .container
+    .row
+      .col-md-12
+        %h2 Contact Us
+        .contact-container
+          .row
+            %form
+              .col-md-6.col-sm-6
+                %textarea.form-control.no-resize{:placeholder => "Message", :rows => "7"}
+              / break
+              .col-md-6.col-sm-6
+                %input.form-control{:placeholder => "Name", :type => "text"}/
+                %input.form-control{:placeholder => "Email", :type => "email"}/
+                %input.btn.btn-lg.btn-green{:type => "submit", :value => "Submit"}/
+        %h5
+          %span ~ Thank you ~
