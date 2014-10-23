@@ -1,0 +1,5 @@
+.flash-container{style: "position:relative;"}
+  - flash.each do |type, message|
+    %div{class: "alert alert-notice"}
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", type: "button"} &#215;
+      %p= message.html_safe

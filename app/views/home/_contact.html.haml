@@ -2,17 +2,20 @@
   #maps
   .container
     .row
-      .col-md-12
+      .col-sm-6.col-md-5
         %h2 Contact Us
         .contact-container
           .row
-            %form
-              .col-md-6.col-sm-6
-                %textarea.form-control.no-resize{:placeholder => "Message", :rows => "7"}
-              / break
-              .col-md-6.col-sm-6
-                %input.form-control{:placeholder => "Name", :type => "text"}/
-                %input.form-control{:placeholder => "Email", :type => "email"}/
-                %input.btn.btn-lg.btn-green{:type => "submit", :value => "Submit"}/
+            = form_for Message.new do |f|
+              = f.text_area :content, placeholder: "Message", class: "form-control no-resize", rows: "7"
+              = f.text_field :name, placeholder: "Name", class: "form-control"
+              = f.text_field :email, placeholder: "Email", class: "form-control"
+              = f.submit "Submit", class: "btn btn-lg btn-green"
+
+
+              / %textarea.form-control.no-resize{:placeholder => "Message", :rows => "7"}
+              / %input.form-control{:placeholder => "Name", :type => "text"}/
+              / %input.form-control{:placeholder => "Email", :type => "email"}/
+              / %input.btn.btn-lg.btn-green{:type => "submit", :value => "Submit"}/
         %h5
           %span ~ Thank you ~

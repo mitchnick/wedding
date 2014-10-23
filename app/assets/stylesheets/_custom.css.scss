@@ -1,6 +1,13 @@
 @import "variables";
 
 // HOME SECTION
+.alert {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+  margin: 20px;
+}
+
 p {
   font-size: 1.20em;
 }
@@ -110,3 +117,8 @@ dd {
   margin-left: 180px;
 }
 
+// CONTACT
+
+#contact {
+  padding-top: 40px;
+}
