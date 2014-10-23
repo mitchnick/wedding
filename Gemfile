@@ -37,6 +37,7 @@ gem 'active_attr'
 gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-rvm'
+gem 'capistrano-bundler'
 gem 'activerecord-postgresql-adapter'
 
 group :doc do

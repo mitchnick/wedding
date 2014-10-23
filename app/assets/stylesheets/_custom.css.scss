@@ -80,6 +80,14 @@ h1 {
   }
 }
 
+.registry-logo {
+  img {
+    max-width: 200px
+  }
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 // THINGS TO DO
 #to-do {
   min-height: 800px;

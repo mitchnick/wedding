@@ -156,6 +156,7 @@ DEPENDENCIES
   active_attr
   activerecord-postgresql-adapter
   capistrano
+  capistrano-bundler
   capistrano-rails
   capistrano-rvm
   coffee-rails (~> 4.0.0)
