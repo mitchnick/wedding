@@ -80,8 +80,8 @@ Wedding::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name: "#{ENV[SENDGRID_USERNAME]}",
-    password: "#{ENV[SENDGRID_PASSWORD]}",
+    user_name: ENV["sendgrid_username"],
+    password: ENV["sendgrid_password"],
     domain: "futurenicks.com",
     address: "smtp.sendgrid.net",
     port: 587,
