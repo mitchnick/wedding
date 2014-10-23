@@ -39,6 +39,7 @@ gem 'capistrano-rails'
 gem 'capistrano-rvm'
 gem 'capistrano-bundler'
 gem 'activerecord-postgresql-adapter'
+gem 'figaro' # Manages environment variables
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
