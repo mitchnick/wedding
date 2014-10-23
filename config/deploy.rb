@@ -21,7 +21,7 @@ set :deploy_to, "/home/deployer/apps/wedding"
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 # set :linked_files, %w{config/database.yml}
@@ -36,6 +36,12 @@ set :deploy_to, "/home/deployer/apps/wedding"
 # set :keep_releases, 5
 
 namespace :deploy do
+  %w[start stop restart].each do |command|
+    desc "#{command} unicorn server"
+    task command, roles: :app, except: {no_release: true} do
+      run "sh /etc/init.d/unicorn_#{application} #{command}"
+    end
+  end
 
   desc 'Restart application'
   task :restart do
