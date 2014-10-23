@@ -5,6 +5,7 @@ set :application, 'wedding'
 set :repo_url, 'git@github.com:mitchnick/wedding.git'
 set :deploy_to, "/home/deployer/apps/wedding"
 
+set :rvm_type, :auto
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
