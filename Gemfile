@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'active_attr'
 
 # For deploying
-gem 'capistrano', '2.15.5'
+gem 'capistrano'
 gem 'activerecord-postgresql-adapter'
 
 group :doc do
