@@ -36,12 +36,6 @@ set :pty, true
 # set :keep_releases, 5
 
 namespace :deploy do
-  %w[start stop restart].each do |command|
-    desc "#{command} unicorn server"
-    task command, roles: :app, except: {no_release: true} do
-      run "sh /etc/init.d/unicorn_#{application} #{command}"
-    end
-  end
 
   desc 'Restart application'
   task :restart do
