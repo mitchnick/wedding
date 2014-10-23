@@ -1,0 +1,139 @@
+@import "variables";
+
+// HOME SECTION
+.alert {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+  margin: 20px;
+}
+
+p {
+  font-size: 1.20em;
+}
+strong {
+  font-weight: bold;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+#home h1{
+  color: $grey2;
+  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+#home h3{
+  color: $home-text;
+  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+#home h4{
+  color: $home-text;
+  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+#home h3:before, #ceremony h3:before {
+  background: $home-text;
+}
+#home h3:before {
+  left: 15%;
+}
+
+#home h3:after, #ceremony h3:after {
+  background: $home-text;
+}
+
+#home h3:after {
+  right: 15%;
+}
+
+h1 {
+  color: $home-text;
+  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#home h5 span, #ceremony h5 span, #contact h5 span {
+  background: $grey2;
+}
+
+
+// CEREMONY SECTION
+#ceremony {
+  min-height: 700px;
+}
+
+.well {
+  background-color: white;
+  opacity: 0.7;
+}
+
+#guest-in {
+  h3 {
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    border-bottom: 1px solid white;
+  }
+  h3:before, h3:after {
+    background: none;
+  }
+}
+
+.registry-logo {
+  img {
+    max-width: 200px
+  }
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+// THINGS TO DO
+#to-do {
+  min-height: 800px;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+dt,
+dd {
+  line-height: 1.42857143;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+
+.dl-horizontal dt {
+  float: left;
+  width: 160px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dl-horizontal dd {
+  margin-left: 180px;
+}
+
+.dl-horizontal hr {
+  margin-left: 180px;
+}
+
+// CONTACT
+
+#contact {
+  padding-top: 40px;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url(<%=asset_path ('glyphicons-halflings-regular.eot')%>);
+  src: url(<%=asset_path('glyphicons-halflings-regular.eot?#iefix')%>) format('embedded-opentype'), url(<%=asset_path('glyphicons-halflings-regular.woff')%>) format('woff'), url(<%=asset_path('glyphicons-halflings-regular.ttf')%>) format('truetype'), url(<%=asset_path('glyphicons-halflings-regular.svg#glyphicons_halflingsregular')%>) format('svg');
+}
