@@ -42,7 +42,7 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       sudo("/etc/init.d/unicorn_wedding stop")
-      # sudo("/etc/init.d/unicorn_wedding start")
+      sudo("/etc/init.d/unicorn_wedding start")
 
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
