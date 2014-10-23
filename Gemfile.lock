@@ -36,6 +36,9 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -147,6 +150,7 @@ DEPENDENCIES
   active_attr
   activerecord-postgresql-adapter
   capistrano
+  capistrano-rvm
   coffee-rails (~> 4.0.0)
   font-awesome-rails
   haml-rails
