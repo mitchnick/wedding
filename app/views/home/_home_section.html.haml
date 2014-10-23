@@ -1,4 +1,4 @@
-%section#home{:style => "background: url(assets/piggyback.jpg);"}
+%section#home{:style => "background: url(#{image_path("piggyback.jpg")});"}
   = render partial: 'home/flash', locals: {flash: flash}
   .container
     .row

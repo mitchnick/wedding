@@ -16,17 +16,17 @@
                   - unless i > photo_count
                     .col-md-4.col-sm-4.col-xs-12.animated.fadeInLeftBig
                       %a.gallery-images{href: image_path("gallery#{i}.jpg")}
-                        .photo-gallery{:style => "background: url(assets/gallery#{i}.jpg);"}
+                        .photo-gallery{:style => "background: url(#{image_path('gallery' + i.to_s + '.jpg')});"}
                         - i += 1
                   - unless i > photo_count
                     .col-md-4.col-sm-4.col-xs-12.animated.fadeInDownBig
                       %a.gallery-images{:href => image_path("gallery#{i}.jpg")}
-                        .photo-gallery{:style => "background: url(assets/gallery#{i}.jpg);"}
+                        .photo-gallery{:style => "background: url(#{image_path('gallery' + i.to_s + '.jpg')});"}
                         - i += 1
                   - unless i > photo_count
                     .col-md-4.col-sm-4.col-xs-12.animated.fadeInRightBig
                       %a.gallery-images{:href => image_path("gallery#{i}.jpg")}
-                        .photo-gallery{:style => "background: url(assets/gallery#{i}.jpg);"}
+                        .photo-gallery{:style => "background: url(#{image_path('gallery' + i.to_s + '.jpg')});"}
                         - i += 1
 
           %a.left.carousel-control{"data-slide" => "prev", :href => "#wedding-photo"}

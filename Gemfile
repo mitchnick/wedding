@@ -35,6 +35,7 @@ gem 'active_attr'
 
 # For deploying
 gem 'capistrano'
+gem 'capistrano-rails'
 gem 'capistrano-rvm'
 gem 'activerecord-postgresql-adapter'
 

@@ -4,8 +4,7 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-set :password, ask('Server password:', nil)
-server '198.58.101.242', user: 'deployer', port: 22, password: fetch(:password), roles: %w{web app db}
+server '198.58.101.242', user: 'deployer', roles: %w{web app db}
 
 # Extended Server Syntax
 # ======================
