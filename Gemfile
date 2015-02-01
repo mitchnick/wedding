@@ -41,6 +41,9 @@ gem 'capistrano-bundler'
 gem 'activerecord-postgresql-adapter'
 gem 'figaro' # Manages environment variables
 
+# For invitations acceptance
+gem 'devise'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -49,6 +52,11 @@ end
 group :production do
   gem 'rails_12factor'                    # Needed for heroku
   gem 'unicorn'
+end
+
+group :development do
+  gem "letter_opener", '~> 1.2'    # Preview mail in the browser instead of sending
+  gem 'quiet_assets'               # Show a LOT less in the rails s logger
 end
 
 # Use ActiveModel has_secure_password

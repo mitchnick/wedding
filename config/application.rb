@@ -21,5 +21,10 @@ module Wedding
     # config.i18n.default_locale = :de
 
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
+    config.to_prepare do
+        Devise::SessionsController.layout "admin"
+        Devise::PasswordsController.layout "admin"
+    end
   end
 end

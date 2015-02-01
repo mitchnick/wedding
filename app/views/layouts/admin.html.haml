@@ -2,6 +2,9 @@
 %html
   %head
     = render partial: "layouts/header_contents"
-  %body{"data-spy" => "scroll", "data-target" => ".navbar-default"}
+  %body#admin
+    = render partial: 'layouts/admin_header'
     = render partial: 'shared/flash', locals: {flash: flash}
-    = yield
+    #admin-body.row
+      .col-xs-12
+        = yield
