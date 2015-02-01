@@ -1,6 +1,12 @@
-%p#notice= notice
+- content_for :top_buttons do
+  = link_to "Edit", edit_guest_path(@guest), class: top_button_class
+  - if @guest.rsvp.present?
+    = link_to "Edit RSVP", edit_guest_rsvp_path(@guest), class: top_button_class
+  - else
+    = link_to "Create RSVP", new_guest_rsvp_path(@guest), class: top_button_class
 
-
-= link_to 'Edit', edit_guest_path(@guest)
-\|
-= link_to 'Back', guests_path
+%h1= @guest.full_name
+.well
+  = display_field("Display Name", @guest.display_name)
+  = display_field("Invited Count", @guest.invited_count.to_s)
+  = display_field("Custom Message", @guest.custom_message)

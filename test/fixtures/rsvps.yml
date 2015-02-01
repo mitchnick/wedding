@@ -12,14 +12,13 @@ two: {}
 
 # == Schema Information
 #
-# Table name: guests
+# Table name: rsvps
 #
-#  id             :integer          not null, primary key
-#  display_name   :string(255)
-#  invited_count  :integer
-#  custom_message :string(255)
-#  created_at     :datetime
-#  updated_at     :datetime
-#  full_name      :string(255)
-#  open_plus_one  :string(255)
+#  id               :integer          not null, primary key
+#  guest_id         :integer          not null
+#  confirmed_number :integer
+#  message          :text
+#  email            :string(255)
+#  created_at       :datetime
+#  updated_at       :datetime
 #

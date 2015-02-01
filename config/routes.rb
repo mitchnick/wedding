@@ -1,9 +1,13 @@
 Wedding::Application.routes.draw do
+
   devise_for :admins, :skip => [:registrations]
   get "home/index"
   root to: 'home#index'
   resources :messages
-  resources :guests
+  resources :guests do
+    resources :rsvps, except: [:index]
+  end
+  resources :rsvps, only: [:index]
 
   resources :admins do
     collection do

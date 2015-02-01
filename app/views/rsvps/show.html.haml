@@ -1,0 +1,9 @@
+- content_for :top_buttons do
+  = link_to "Edit", edit_guest_rsvp_path(@guest, @rsvp), class: top_button_class
+
+%h1= @rsvp.full_name
+.well
+  = display_field("Confirmed Count", @rsvp.confirmed_number)
+  = display_field("Invited Count", @rsvp.invited_count.to_s)
+  = display_field("Custom Message", @rsvp.show_custom_message)
+  = display_field("Email", @rsvp.email)

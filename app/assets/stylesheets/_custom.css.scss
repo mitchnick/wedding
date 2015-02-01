@@ -156,6 +156,9 @@ dd {
   h1 {
     color: black;
   }
+  .well {
+    padding-bottom: 30px;
+  }
   .navbar-default {
     background: $primary-blue
   }
@@ -207,6 +210,20 @@ dd {
   .navbar-default .navbar-nav > .open > a:focus {
     color: $grey1;
     background-color: #e7e7e7;
+  }
+
+  .form-control {
+    height: 34px;
+  }
+  textarea.form-control {
+    height: auto;
+  }
+  .form-control:focus {
+    border-color: $grey1;
+    outline-color: rgb(59, 153, 252);
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 5px;
   }
 
 }

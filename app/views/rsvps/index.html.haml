@@ -1,0 +1,30 @@
+%h1 RSVPs
+.well
+  = display_calculation("RSVPs", Rsvp.count)
+  = display_calculation("Number Coming", Rsvp.total_confirmed_count)
+  = display_calculation("Possible Count", Rsvp.total_possible_count)
+  = display_calculation("Attendance Percent of RSVPs", Rsvp.attendance_percent)
+  = display_calculation("% of total guests RSVP", Rsvp.percent_responded)
+
+
+%table.table.table-striped.datatable
+  %thead
+    %tr
+      %th Name
+      %th Confirmed Count
+      %th Invited Count
+      %th Message
+      %th Email
+      %th Actions
+  %tbody
+    - @rsvps.each do |rsvp|
+      %tr
+        %td= link_to rsvp.full_name, [rsvp.guest, rsvp]
+        %td= rsvp.confirmed_number
+        %td= rsvp.invited_count
+        %td= rsvp.message
+        %td= rsvp.email
+        %td
+          .links
+            = link_to 'Show', [rsvp.guest, rsvp]
+            = link_to 'Edit', edit_guest_rsvp_path(rsvp.guest, rsvp)

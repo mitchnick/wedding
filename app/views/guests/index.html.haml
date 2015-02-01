@@ -13,12 +13,10 @@
   %tbody
     - @guests.each do |guest|
       %tr
-        %td= guest.full_name
+        %td= link_to guest.full_name, guest
         %td= guest.invited_count
         %td= " - "
         %td
           .links
             = link_to 'Show', guest
             = link_to 'Edit', edit_guest_path(guest)
-            = link_to 'Destroy', guest, :method => :delete, :data => { :confirm => 'Are you sure?' }
-

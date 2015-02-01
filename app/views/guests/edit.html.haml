@@ -1,7 +1,7 @@
-%h1 Editing guest
+%h1 Editing Guest
+.well
+  = render partial: 'form', locals: {guest: @guest}
 
-= render 'form'
-
-= link_to 'Show', @guest
-\|
-= link_to 'Back', guests_path
+.links
+  = link_to 'Show', @guest
+  = link_to 'Back', guests_path

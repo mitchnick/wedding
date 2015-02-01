@@ -1,8 +1,8 @@
-.button-top-row
-  .btn.btn-primary= link_to 'New Admin', new_admin_path
+- content_for :top_buttons do
+  = link_to "New Admin", new_admin_path, class: top_button_class
 
 %h1 Listing Admins
-%table.table.table-hover
+%table.table.table-striped.datatable
   %thead
     %tr
       %th Email
@@ -10,7 +10,7 @@
   %tbody
     - @admins.each do |admin|
       %tr
-        %td= admin.email
+        %td= link_to admin.email, admin
         %td
           .links.table-links
             = link_to 'Show', admin

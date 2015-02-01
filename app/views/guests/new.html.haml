@@ -1,5 +1,6 @@
 %h1 New guest
+.well
+  = render partial: 'form', locals: {guest: @guest}
 
-= render 'form'
-
-= link_to 'Back', guests_path
+.links
+  = link_to 'Back', guests_path

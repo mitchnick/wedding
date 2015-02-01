@@ -17,6 +17,7 @@
 //= require dataTables/jquery.dataTables
 //= require turbolinks
 //= require google_maps_api
+//= require select2
 //= require_tree .
 
 $(document).on('ready page:load', function () {
@@ -29,5 +30,7 @@ $(document).on('ready page:load', function () {
     "bLengthChange": false,
     "iDisplayLength": 50,
   });
+
+  $(".select2").select2();
 
 })

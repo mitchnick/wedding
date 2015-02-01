@@ -1,0 +1,14 @@
+%h1.text-center
+  RSVP for
+  = @rsvp.display_name
+.row
+  .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+    %h4.text-center.text-muted= custom_message_for(guest)
+    .well
+      = simple_form_for [guest, rsvp] do |f|
+        = render partial: "shared/form_errors", locals: {record: rsvp}
+        = f.input :confirmed_number, label: "How many people are planning to attend?", as: :select, collection: display_possible_guests(guest), input_html: {class: "select2"}
+        = f.input :email, label: "Your Email Address:"
+        = f.input :message, label: "Send the bride and groom a message (optional)", input_html: {rows: 3}
+        .actions
+          = f.button :submit, "Submit RSVP", class: "btn-block btn-info btn-lg"
