@@ -19,10 +19,19 @@ module ApplicationHelper
     "btn btn-default"
   end
 
+  def display_field(name, value)
+    content_tag(:dl, class: "dl-horizontal") do
+      name[0] = name[0].capitalize
+      content_tag(:dt, name) +
+      content_tag(:dd, value.to_s.html_safe)
+    end
+  end
+
   def display_calculation(name, value)
-    tag(:p) +
-    tag(:span, class: "bold") + name
-    + value.to_s
+    content_tag(:p) do
+      content_tag(:span, name, class: "bold") +
+      " - " + value.to_s
+    end
   end
 
   def display_possible_guests(guest)
