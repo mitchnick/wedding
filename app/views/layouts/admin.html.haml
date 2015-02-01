@@ -5,6 +5,9 @@
   %body#admin
     = render partial: 'layouts/admin_header'
     = render partial: 'shared/flash', locals: {flash: flash}
-    #admin-body.row
+    #admin-containter.row
+      - if content_for? :top_buttons
+        .text-right.top-buttons
+          = content_for :top_buttons
       .col-xs-12
         = yield

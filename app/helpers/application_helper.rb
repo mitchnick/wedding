@@ -15,4 +15,7 @@ module ApplicationHelper
     end
   end
 
+  def top_button_class
+    "btn btn-default"
+  end
 end

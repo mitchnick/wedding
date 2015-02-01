@@ -5,6 +5,13 @@ Wedding::Application.routes.draw do
   resources :messages
   resources :guests
 
+  resources :admins do
+    collection do
+      get 'edit_password'
+      patch 'update_password'
+    end
+  end
+
   get 'all_admin', to: 'admins#index'
 
   devise_scope :admin do

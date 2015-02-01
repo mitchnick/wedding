@@ -43,6 +43,8 @@ gem 'figaro' # Manages environment variables
 
 # For invitations acceptance
 gem 'devise'
+gem 'jquery-datatables-rails', '~> 3.1.1'
+gem 'simple_form'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

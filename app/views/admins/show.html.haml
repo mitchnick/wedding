@@ -1,0 +1,7 @@
+%h1= @admin.email
+.well
+  = display_field("Last Sign In", @admin.last_sign_in_at.to_s)
+  = display_field("Created At", @admin.created_at.to_s)
+.links
+  = link_to 'Edit', edit_admin_path(@admin)
+  = link_to 'Back', admins_path
