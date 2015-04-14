@@ -9,6 +9,8 @@ Wedding::Application.routes.draw do
   end
   resources :rsvps, only: [:index]
 
+  match 'rsvp', to: 'rsvps#enter_rsvp_code', as: :rsvp_code, via: [:get, :post]
+
   resources :admins do
     collection do
       get 'edit_password'

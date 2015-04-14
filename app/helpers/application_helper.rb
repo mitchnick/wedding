@@ -19,7 +19,12 @@ module ApplicationHelper
     "btn btn-default"
   end
 
+  def form_class_width
+    "col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"
+  end
+
   def display_field(name, value)
+    value = "-" if value.nil? || value == ""
     content_tag(:dl, class: "dl-horizontal") do
       name[0] = name[0].capitalize
       content_tag(:dt, name) +
@@ -68,8 +73,7 @@ module ApplicationHelper
     if guest.custom_message.present?
       guest.custom_message
     else
-      "Thank you for submitting an RSVP for our wedding on July 25. Don't hesitate to reach out to Emily,
-      Mitch or any of the families if there is anything we can do to help make this a special day for you as well."
+      "Thank you for submitting an RSVP for our wedding on July 25."
     end
   end
 

@@ -10,12 +10,13 @@ end
 #
 # Table name: guests
 #
-#  id             :integer          not null, primary key
-#  display_name   :string(255)
-#  invited_count  :integer
-#  custom_message :string(255)
-#  created_at     :datetime
-#  updated_at     :datetime
-#  full_name      :string(255)
-#  open_plus_one  :string(255)
+#  id               :integer          not null, primary key
+#  display_name     :string(255)
+#  invited_count    :integer
+#  custom_message   :string(255)
+#  created_at       :datetime
+#  updated_at       :datetime
+#  full_name        :string(255)
+#  open_plus_one    :string(255)
+#  custom_rsvp_code :string(255)
 #

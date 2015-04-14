@@ -37,12 +37,37 @@ class RsvpsController < ApplicationController
 
   def update
     flash[:notice] = 'Rsvp was successfully updated.' if @rsvp.update(rsvp_params)
-    respond_with(@rsvp)
+    if admin_signed_in?
+      respond_with(@rsvp)
+    else
+      redirect_to root_path
+    end
   end
 
   def destroy
     @rsvp.destroy
     respond_with(@rsvp)
+  end
+
+  def enter_rsvp_code
+    @rsvp_code = params[:rsvp][:custom_rsvp_code].downcase if params[:rsvp] && params[:rsvp][:custom_rsvp_code]
+
+    respond_to do |format|
+      if @rsvp_code.present? && @guest = Guest.find_by_custom_rsvp_code(@rsvp_code)
+        puts "GUEST FOUND!!!!!"
+        if @guest.rsvp.present?
+          @rsvp = @guest.rsvp
+          format.html {render :edit, layout: "form_only"}
+        else
+          @rsvp = @guest.build_rsvp
+          format.html {render :new, layout: "form_only"}
+        end
+      else
+        puts "********* No GUEST FOUND *********"
+        flash[:notice] = "Hmm, we couldn't find your code. Please try entering your RSVP code again." if @rsvp_code.present?
+        format.html {render layout: "form_only"}
+      end
+    end
   end
 
   private

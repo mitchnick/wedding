@@ -1,0 +1,9 @@
+.row
+  %div{class: form_class_width}
+    .well
+      %h1.text-center Enter in your the RSVP Code
+      %p.text-center.text-muted Handwritten code with your invite
+      = simple_form_for(:rsvp, url: rsvp_code_path, method: :post) do |f|
+        = f.input :custom_rsvp_code, label: false, as: :string
+        .actions
+          = f.button :submit, "Enter Code", class: "btn-block btn-info btn-lg"

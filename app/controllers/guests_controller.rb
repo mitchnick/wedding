@@ -43,6 +43,6 @@ class GuestsController < ApplicationController
     end
 
     def guest_params
-      params[:guest]
+      params.require(:guest).permit(:full_name, :display_name, :invited_count, :custom_message, :custom_rsvp_code)
     end
 end

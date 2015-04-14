@@ -61,6 +61,7 @@ end
 group :development do
   gem "letter_opener", '~> 1.2'    # Preview mail in the browser instead of sending
   gem 'quiet_assets'               # Show a LOT less in the rails s logger
+  gem 'byebug'                     # Debugger that works with Ruby 2.0
 end
 
 # Use ActiveModel has_secure_password

@@ -1,8 +1,12 @@
-%h1 Editing RSVP
-.well
-  = render partial: 'form', locals: {rsvp: @rsvp, guest: @guest}
+.row
+  %div{class: form_class_width}
+    .well
+      %h2.text-center
+        Editing RSVP for
+        = @rsvp.display_name
+      = render partial: 'form', locals: {rsvp: @rsvp, guest: @guest}
 
-- if admin_signed_in?
-  .links
-    = link_to 'Show', @rsvp
-    = link_to 'Back', rsvps_path
+    - if admin_signed_in?
+      .links
+        = link_to 'Show', @rsvp
+        = link_to 'Back', rsvps_path
