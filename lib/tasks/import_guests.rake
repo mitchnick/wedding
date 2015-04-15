@@ -16,7 +16,8 @@ namespace :import do
           puts "creating new guest"
           Guest.create!(row.to_hash)
         else
-          puts "blank row"
+          puts "** blank row **"
+          puts guest_hash
         end
       end
     end
