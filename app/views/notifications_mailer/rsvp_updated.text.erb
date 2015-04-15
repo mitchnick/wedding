@@ -1,9 +1,9 @@
 Name: <%= @rsvp.display_name %>
+
 Number Coming: <%= @rsvp.confirmed_number %>
 
 Email: <%= @rsvp.email %>
 
-<% if @rsvp.message.present? %>
-  The following message was sent:
-  <%= @rsvp.message %>
-<% end %>
+
+The following message was sent:
+<%= @rsvp.message %>

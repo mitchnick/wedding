@@ -11,12 +11,12 @@ class NotificationsMailer < ActionMailer::Base
 
   def rsvp_created(rsvp_id)
     @rsvp = Rsvp.find(rsvp_id)
-    mail( :submit => "Futurenicks: New RSVP Submitted")
+    mail( :subject => "Futurenicks: New RSVP Submitted")
   end
 
   def rsvp_updated(rsvp_id)
     @rsvp = Rsvp.find(rsvp_id)
-    mail( :submit => "Futurenicks: RSVP Updated")
+    mail( :subject => "Futurenicks: RSVP Updated")
   end
 
 end
