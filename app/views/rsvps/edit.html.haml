@@ -8,5 +8,5 @@
 
     - if admin_signed_in?
       .links
-        = link_to 'Show', @rsvp
+        = link_to 'Show', [@rsvp.guest, @rsvp]
         = link_to 'Back', rsvps_path

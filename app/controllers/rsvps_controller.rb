@@ -38,7 +38,7 @@ class RsvpsController < ApplicationController
   def update
     flash[:notice] = 'Rsvp was successfully updated.' if @rsvp.update(rsvp_params)
     if admin_signed_in?
-      respond_with(@rsvp)
+      respond_with([@rsvp.guest, @rsvp])
     else
       redirect_to root_path
     end
@@ -46,7 +46,7 @@ class RsvpsController < ApplicationController
 
   def destroy
     @rsvp.destroy
-    respond_with(@rsvp)
+    redirect_to rsvps_path
   end
 
   def enter_rsvp_code
