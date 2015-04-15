@@ -3,7 +3,7 @@ class Rsvp < ActiveRecord::Base
 
   validates_presence_of :guest_id, :confirmed_number, :email
 
-  delegate :invited_count, :full_name, :display_name, to: :guest
+  delegate :invited_count, :full_name, :display_name, :custom_rsvp_code, to: :guest
 
   def show_custom_message
     if message.present?
@@ -11,6 +11,18 @@ class Rsvp < ActiveRecord::Base
     else
       "none"
     end
+  end
+
+  def create_message_on_submit
+    self.confirmed_number != 0 ?
+      "Thanks for submitting your RSVP. We're so excited to celebrate our special day with you!" :
+      "Thanks for submitting your RSVP. We'll be thinking of you as you celebrate from afar. Please let us know if you plans do change."
+  end
+
+  def update_message_on_submit
+    self.confirmed_number != 0 ?
+      "Thanks for updating your RSVP. We're so excited to celebrate our special day with you!" :
+      "Thanks for updating your RSVP. We'll be thinking of you as you celebrate from afar. Please let us know if you plans do change."
   end
 
   def self.total_confirmed_count

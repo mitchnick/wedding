@@ -26,17 +26,29 @@ class RsvpsController < ApplicationController
     @rsvp = @guest.build_rsvp(rsvp_params)
     respond_to do |format|
       if @rsvp.save
-        format.html { redirect_to [@guest, @rsvp], notice: 'RSVP was successfully submitted.' }
-        format.json { render :show, status: :created, location: [@guest, @rsvp] }
+        if admin_signed_in?
+          format.html { redirect_to [@guest, @rsvp], notice: 'RSVP was successfully created.' }
+          format.json { render :show, status: :created, location: [@guest, @rsvp] }
+        else # guest is submitting RSVP
+          format.html { redirect_to root_path, notice: @rsvp.create_message_on_submit }
+          format.json { render :show, status: :created, location: [@guest, @rsvp] }
+        end
       else
-        format.html { render :new }
-        format.json { render json: @rsvp.errors, status: :unprocessable_entity }
+        if admin_signed_in?
+          format.html { render :new }
+          format.json { render json: @rsvp.errors, status: :unprocessable_entity }
+        else
+          @rsvp_code = @rsvp.custom_rsvp_code
+          flash[:error] = "Oops! Please verify the information below."
+          format.html { render :new, layout: "form_only" }
+          format.json { render :show, status: :created, location: [@guest, @rsvp] }
+        end
       end
     end
   end
 
   def update
-    flash[:notice] = 'Rsvp was successfully updated.' if @rsvp.update(rsvp_params)
+    flash[:notice] = @rsvp.update_message_on_submit if @rsvp.update(rsvp_params)
     if admin_signed_in?
       respond_with([@rsvp.guest, @rsvp])
     else
@@ -54,7 +66,6 @@ class RsvpsController < ApplicationController
 
     respond_to do |format|
       if @rsvp_code.present? && @guest = Guest.find_by_custom_rsvp_code(@rsvp_code)
-        puts "GUEST FOUND!!!!!"
         if @guest.rsvp.present?
           @rsvp = @guest.rsvp
           format.html {render :edit, layout: "form_only"}
@@ -63,7 +74,6 @@ class RsvpsController < ApplicationController
           format.html {render :new, layout: "form_only"}
         end
       else
-        puts "********* No GUEST FOUND *********"
         flash[:notice] = "Hmm, we couldn't find your code. Please try entering your RSVP code again." if @rsvp_code.present?
         format.html {render layout: "form_only"}
       end
