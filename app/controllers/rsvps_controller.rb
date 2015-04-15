@@ -30,6 +30,7 @@ class RsvpsController < ApplicationController
           format.html { redirect_to [@guest, @rsvp], notice: 'RSVP was successfully created.' }
           format.json { render :show, status: :created, location: [@guest, @rsvp] }
         else # guest is submitting RSVP
+          NotificationsMailer.rsvp_created(@rsvp.id).deliver
           format.html { redirect_to root_path, notice: @rsvp.create_message_on_submit }
           format.json { render :show, status: :created, location: [@guest, @rsvp] }
         end
@@ -52,6 +53,7 @@ class RsvpsController < ApplicationController
     if admin_signed_in?
       respond_with([@rsvp.guest, @rsvp])
     else
+      NotificationsMailer.rsvp_updated(@rsvp.id).deliver
       redirect_to root_path
     end
   end
