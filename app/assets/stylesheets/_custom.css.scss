@@ -278,3 +278,13 @@ table .links {
 #rsvp {
   padding-top: 30px;
 }
+
+.rsvp-button {
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 1.4em;
+  a:hover {
+    text-decoration: none;
+  }
+}
