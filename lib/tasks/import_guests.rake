@@ -12,7 +12,7 @@ namespace :import do
         puts "updating existing value"
         guest.first.update_attributes(guest_hash)
       else
-        unless guest_hash.has_key?("display_name")
+        if guest_hash.has_key?("display_name")
           puts "creating new guest"
           Guest.create!(row.to_hash)
         else
