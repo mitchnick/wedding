@@ -16,13 +16,13 @@ class Rsvp < ActiveRecord::Base
   def create_message_on_submit
     self.confirmed_number != 0 ?
       "Thanks for submitting your RSVP. We're so excited to celebrate our special day with you!" :
-      "Thanks for submitting your RSVP. We'll be thinking of you as you celebrate from afar. Please let us know if you plans do change."
+      "Thanks for submitting your RSVP. We'll be thinking of you as you celebrate from afar. Please let us know if your plans change."
   end
 
   def update_message_on_submit
     self.confirmed_number != 0 ?
       "Thanks for updating your RSVP. We're so excited to celebrate our special day with you!" :
-      "Thanks for updating your RSVP. We'll be thinking of you as you celebrate from afar. Please let us know if you plans do change."
+      "Thanks for updating your RSVP. We'll be thinking of you as you celebrate from afar. Please let us know if your plans change."
   end
 
   def self.total_confirmed_count
