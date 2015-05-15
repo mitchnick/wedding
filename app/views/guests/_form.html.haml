@@ -4,7 +4,7 @@
   = f.input :full_name
   = f.input :display_name
   = f.input :invited_count
-  = f.input :custom_message
-  = f.input :custom_rsvp_code
+  .hidden= f.input :custom_message
+  .hidden= f.input :custom_rsvp_code
   .actions
     = f.button :submit

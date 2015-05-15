@@ -9,5 +9,5 @@
 .well
   = display_field("Display Name", @guest.display_name)
   = display_field("Invited Count", @guest.invited_count.to_s)
-  = display_field("Custom Message", @guest.custom_message)
-  = display_field("Custom RSVP Code", @guest.custom_rsvp_code)
+  .hidden= display_field("Custom Message", @guest.custom_message)
+  .hidden= display_field("Custom RSVP Code", @guest.custom_rsvp_code)
