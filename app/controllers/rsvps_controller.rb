@@ -68,6 +68,7 @@ class RsvpsController < ApplicationController
 
     respond_to do |format|
       if @rsvp_code.present? && @guest = Guest.find_by_custom_rsvp_code(@rsvp_code)
+        @show_custom_message = true
         if @guest.rsvp.present?
           @rsvp = @guest.rsvp
           format.html {render :edit, layout: "form_only"}

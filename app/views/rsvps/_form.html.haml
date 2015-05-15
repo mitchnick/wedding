@@ -1,6 +1,7 @@
+- show_custom_message ||= false
 .row
   .col-xs-12.col-sm-10.col-sm-offset-1
-    %h4.text-center{class: "#{'hidden' if admin_signed_in?}"}= custom_message_for(guest)
+    %h4.text-center{class: "#{'hidden' unless show_custom_message}"}= custom_message_for(guest)
     .well
       = simple_form_for [guest, rsvp] do |f|
         = render partial: "shared/form_errors", locals: {record: rsvp}

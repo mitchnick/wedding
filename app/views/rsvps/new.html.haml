@@ -4,7 +4,7 @@
       %h2.text-center
         RSVP for
         = @rsvp.display_name
-      = render partial: 'form', locals: {rsvp: @rsvp, guest: @guest}
+      = render partial: 'form', locals: {rsvp: @rsvp, guest: @guest, show_custom_message: @show_custom_message}
 
     - if admin_signed_in?
       .links
