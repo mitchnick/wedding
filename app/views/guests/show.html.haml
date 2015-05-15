@@ -1,7 +1,7 @@
 - content_for :top_buttons do
   = link_to "Edit", edit_guest_path(@guest), class: top_button_class
   - if @guest.rsvp.present?
-    = link_to "Edit RSVP", edit_guest_rsvp_path(@guest), class: top_button_class
+    = link_to "Edit RSVP", edit_guest_rsvp_path(@guest, @guest.rsvp), class: top_button_class
   - else
     = link_to "Create RSVP", new_guest_rsvp_path(@guest), class: top_button_class
 
