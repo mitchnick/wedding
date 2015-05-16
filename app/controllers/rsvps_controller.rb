@@ -31,6 +31,7 @@ class RsvpsController < ApplicationController
           format.json { render :show, status: :created, location: [@guest, @rsvp] }
         else # guest is submitting RSVP
           NotificationsMailer.rsvp_created(@rsvp.id).deliver
+          NotificationsMailer.guest_confirmation(@rsvp.id).deliver if @rsvp.confirmed_number != 0
           format.html { redirect_to root_path, notice: @rsvp.create_message_on_submit }
           format.json { render :show, status: :created, location: [@guest, @rsvp] }
         end

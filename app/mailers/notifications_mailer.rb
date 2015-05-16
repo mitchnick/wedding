@@ -19,4 +19,9 @@ class NotificationsMailer < ActionMailer::Base
     mail( :subject => "Futurenicks: RSVP Updated")
   end
 
+  def guest_confirmation(rsvp_id)
+    @rsvp = Rsvp.find(rsvp_id)
+    mail( :subject => "WOOO HOOO!")
+  end
+
 end
