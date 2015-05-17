@@ -21,7 +21,7 @@ class NotificationsMailer < ActionMailer::Base
 
   def guest_confirmation(rsvp_id)
     @rsvp = Rsvp.find(rsvp_id)
-    mail( :subject => "WOOO HOOO!")
+    mail( subject: "WOOO HOOO!", to: @rsvp.email )
   end
 
 end
