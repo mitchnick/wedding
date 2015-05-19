@@ -7,9 +7,10 @@
   = display_calculation("% of total guests RSVP", Rsvp.percent_responded)
 
 
-%table.table.table-striped.datatable
+%table.table.table-striped.rsvp-datatable
   %thead
     %tr
+      %th Updated Date
       %th Name
       %th Confirmed Count
       %th Invited Count
@@ -19,6 +20,7 @@
   %tbody
     - @rsvps.each do |rsvp|
       %tr
+        %td= rsvp.updated_at.strftime('%m/%d/%Y')
         %td= link_to rsvp.full_name, [rsvp.guest, rsvp]
         %td= rsvp.confirmed_number
         %td= rsvp.invited_count

@@ -31,6 +31,13 @@ $(document).on('ready page:load', function () {
     "iDisplayLength": 50,
   });
 
+  $('.rsvp-datatable').DataTable({
+    pagingType: 'full_numbers',
+    "bLengthChange": false,
+    "aaSorting": [[ 0, "desc" ]],
+    "iDisplayLength": 50,
+  });
+
   $(".select2").select2();
 
 })
