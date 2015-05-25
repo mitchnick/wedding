@@ -15,7 +15,7 @@
       %tr
         %td= link_to guest.full_name, guest
         %td= guest.invited_count
-        %td= " - "
+        %td= guest.rsvp.try(:confirmed_number)
         %td
           .links
             = link_to 'Show', guest
