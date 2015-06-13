@@ -50,7 +50,7 @@ module ApplicationHelper
   def text_for_guests(current_count, guest)
     if guest.open_plus_one?
       if current_count > 2
-        current_count + " - I'm coming with guests"
+        current_count.to_s + " - I'm coming with guests"
       elsif current_count == 2
         "2 - I'm coming and bringing a plus one"
       elsif current_count == 1
