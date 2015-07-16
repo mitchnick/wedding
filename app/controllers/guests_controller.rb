@@ -23,8 +23,11 @@ class GuestsController < ApplicationController
 
   def create
     @guest = Guest.new(guest_params)
-    @guest.save
-    respond_with(@guest)
+    if @guest.save
+      respond_with(@guest)
+    else
+      render :new
+    end
   end
 
   def update
