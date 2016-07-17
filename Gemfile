@@ -34,12 +34,12 @@ gem 'jbuilder', '~> 1.2'
 gem 'active_attr'
 
 # For deploying
-gem 'capistrano'
-gem 'capistrano-rails'
-gem 'capistrano-rvm'
-gem 'capistrano-bundler'
-gem 'activerecord-postgresql-adapter'
-gem 'figaro' # Manages environment variables
+# gem 'capistrano'
+# gem 'capistrano-rails'
+# gem 'capistrano-rvm'
+# gem 'capistrano-bundler'
+# gem 'activerecord-postgresql-adapter'
+# gem 'figaro' # Manages environment variables
 
 # For invitations acceptance
 gem 'devise'
@@ -55,7 +55,6 @@ end
 
 group :production do
   gem 'rails_12factor'                    # Needed for heroku
-  gem 'unicorn'
 end
 
 group :development do
