@@ -47,6 +47,9 @@ gem 'jquery-datatables-rails', '~> 3.1.1'
 gem 'simple_form'
 gem 'annotate'
 gem "select2-rails"
+gem 'puma'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'gmaps4rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

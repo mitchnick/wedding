@@ -16,7 +16,9 @@
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require dataTables/jquery.dataTables
 //= require turbolinks
-//= require google_maps_api
+//= require underscore
+//= require gmaps/google
+//= require maps
 //= require select2
 //= require_tree .
 

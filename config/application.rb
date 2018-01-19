@@ -20,11 +20,20 @@ module Wedding
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins 'http://localhost:3000'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
     config.to_prepare do
-        Devise::SessionsController.layout "admin"
-        Devise::PasswordsController.layout "admin"
+      Devise::SessionsController.layout "admin"
+      Devise::PasswordsController.layout "admin"
     end
+
+
   end
 end
